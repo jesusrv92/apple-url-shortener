@@ -13,8 +13,6 @@
   "devDependencies": {
     "@neutrinojs/mocha": "^9.5.0",
     "@neutrinojs/node": "^9.5.0",
-    "@neutrinojs/standardjs": "^9.5.0",
-    "eslint": "^7",
     "mocha": "^8",
     "neutrino": "^9.5.0",
     "webpack": "^4",

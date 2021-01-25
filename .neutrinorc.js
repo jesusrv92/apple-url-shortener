@@ -7,7 +7,6 @@ module.exports = {
     root: __dirname,
   },
   use: [
-    standard(),
     node(),
     mocha(),
   ],
