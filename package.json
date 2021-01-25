@@ -1,0 +1,23 @@
+{
+  "name": "neutrino",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "license": "MIT",
+  "module": "src/index.js",
+  "scripts": {
+    "start": "webpack --watch --mode development",
+    "build": "webpack --mode production",
+    "test": "mocha",
+    "lint": "eslint --cache --format codeframe --ext mjs,js src test"
+  },
+  "devDependencies": {
+    "@neutrinojs/mocha": "^9.5.0",
+    "@neutrinojs/node": "^9.5.0",
+    "@neutrinojs/standardjs": "^9.5.0",
+    "eslint": "^7",
+    "mocha": "^8",
+    "neutrino": "^9.5.0",
+    "webpack": "^4",
+    "webpack-cli": "^3"
+  }
+}
