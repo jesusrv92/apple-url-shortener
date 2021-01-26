@@ -35,7 +35,7 @@ class ShortURL {
         ShortURL.addURL(this);
     }
 
-    static addURL(urlObject = { url = '', id = '', expire = Date.now() }) {
+    static addURL(urlObject = { url: '', id: '', expire: Date.now() }) {
         const { url, id } = urlObject
         ShortURL.cacheURL.set(url, urlObject);
         ShortURL.cacheID.set(id, urlObject);
@@ -63,7 +63,7 @@ class ShortURL {
         }
     }
 
-    static checkExpiration(urlObject = { url = '', id = '', expire = Date.now() }) {
+    static checkExpiration(urlObject = { url: '', id: '', expire: Date.now() }) {
         if (urlObject.expire < Date.now) {
             ShortURL.cacheID.delete(urlObject.id);
             ShortURL.cacheURL.delete(urlObject.url);
