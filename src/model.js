@@ -8,13 +8,13 @@ class ShortURL {
     static cacheURL = new Map();
     static cacheID = new Map();
 
-    constructor(url = '') {
+    constructor(url = '', options = { expire: Date.now() + oneday }) {
         const normalized = normalizeURL(url);
 
         if (ShortURL.cacheURL.has(normalized)) {
             const urlObject = ShortURL.cacheURL.get(normalized);
             if (!ShortURL.checkExpiration(urlObject)) {
-                urlObject.expire = Date.now() + oneday;
+                urlObject.expire = options.expire;
                 return urlObject;
             }
         }
@@ -31,7 +31,7 @@ class ShortURL {
 
         this.url = normalized;
         this.id = id;
-        this.expire = Date.now() + oneday
+        this.expire = options.expire;
         ShortURL.addURL(this);
     }
 
@@ -64,7 +64,7 @@ class ShortURL {
     }
 
     static checkExpiration(urlObject = { url: '', id: '', expire: Date.now() }) {
-        if (urlObject.expire < Date.now) {
+        if (urlObject.expire < Date.now()) {
             ShortURL.cacheID.delete(urlObject.id);
             ShortURL.cacheURL.delete(urlObject.url);
             return true;
