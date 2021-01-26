@@ -19,3 +19,20 @@ Expectations
 •	Do you really want to use a hash function? Think twice and motivate your choice.
 •	You may want to use external dependencies e.g. database. It’s totally fine! Just tell us more about your choice.
 ---
+
+In the project directory, you can run:
+
+### `yarn start`
+
+This runs the project in development mode.
+
+For a production ready deployment, run
+### `yarn build`
+
+and start the server using
+
+### `node .`
+
+To run the tests, use: 
+
+### `yarn test`
