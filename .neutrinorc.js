@@ -1,4 +1,3 @@
-const standard = require('@neutrinojs/standardjs');
 const node = require('@neutrinojs/node');
 const mocha = require('@neutrinojs/mocha');
 
