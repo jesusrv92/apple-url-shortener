@@ -17,5 +17,9 @@
     "neutrino": "^9.5.0",
     "webpack": "^4",
     "webpack-cli": "^3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "normalize-url": "^5.3.0"
   }
 }
