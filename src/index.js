@@ -26,7 +26,7 @@ server.get('/:shortURL', (req, res) => {
   //UPDATE EXPIRE DATE OF PAGE/UNIQUEID TO 24 HOURS
 
   const { shortURL } = req.params;
-  res.redirect( ShortURL.cacheID.get(shortURL) ?? '/');
+  res.redirect( ShortURL.getID(shortURL) ?? '/');
 });
 server.listen(port, () => console.log(`Running on http://localhost:${port}`))
 
