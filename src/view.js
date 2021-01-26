@@ -7,7 +7,7 @@ const view = (shortURL) =>
     <form>
    </div>
   <div>
-    ${shortURL ? `<a href="${shortURL}">${shortURL}</a>` : ''}
+    ${shortURL ? `<a href="${shortURL}" target="_blank" rel="noopener noreferrer">${shortURL}</a>` : ''}
   </div>
   `
 
