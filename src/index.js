@@ -14,6 +14,8 @@ server.get('/', (req, res) => {
 });
 server.post('/', (req, res) => {
   const { longURL } = req.body;
+  if(!longURL) return res.send(view());
+
   const shortened = new ShortURL(longURL);
 
   res.send(view(req.headers.host + '/' + shortened.id));
