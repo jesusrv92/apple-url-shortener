@@ -13,18 +13,12 @@ server.get('/', (req, res) => {
   res.send(view());
 });
 server.post('/', (req, res) => {
-  //TO DO
-  //SET EXPIRE DATE OF PAGE/ID TO 24 HOURS FROM NOW
-
   const { longURL } = req.body;
   const shortened = new ShortURL(longURL);
 
   res.send(view(req.headers.host + '/' + shortened.id));
 });
 server.get('/:shortURL', (req, res) => {
-  //TODO
-  //UPDATE EXPIRE DATE OF PAGE/UNIQUEID TO 24 HOURS
-
   const { shortURL } = req.params;
 
   res.redirect( ShortURL.getURL(shortURL) ?? '/');
