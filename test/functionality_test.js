@@ -17,7 +17,7 @@ describe('Functionality testing', () => {
     //TODO
     assert.strictEqual(true, !false)
   });
-  it('Should return new value for long urljuga if expired', () => {
+  it('Should return new value for long url if expired', () => {
     //TODO
     assert.strictEqual(true, !false)
   });
