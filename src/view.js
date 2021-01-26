@@ -1,4 +1,4 @@
-const view = (shortURL) =>
+const view = (shortURL = '') =>
   `<div style="padding: 20px">
     <h1>URL SHORTENER</h1>
     <form action='/' method="POST">
