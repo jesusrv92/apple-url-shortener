@@ -22,8 +22,13 @@ server.post('/', (req, res) => {
 });
 server.get('/:shortURL', (req, res) => {
   const { shortURL } = req.params;
-
-  res.redirect( ShortURL.getURL(shortURL) ?? '/');
+  const longURL = ShortURL.getURL(shortURL);
+  if(longURL) {
+    res.redirect(longURL);
+  }
+  else {
+    res.sendStatus(404);
+  }
 });
 server.listen(port, () => console.log(`Running on http://localhost:${port}`))
 
