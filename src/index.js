@@ -14,7 +14,7 @@ server.get('/', (req, res) => {
 });
 server.post('/', (req, res) => {
   const { longURL } = req.body;
-  if(!longURL) return res.send(view());
+  if (!longURL) return res.send(view());
 
   const shortened = new ShortURL(longURL);
 
@@ -23,7 +23,7 @@ server.post('/', (req, res) => {
 server.get('/:shortURL', (req, res) => {
   const { shortURL } = req.params;
   const longURL = ShortURL.getURL(shortURL);
-  if(longURL) {
+  if (longURL) {
     res.redirect(longURL);
   }
   else {
@@ -33,5 +33,5 @@ server.get('/:shortURL', (req, res) => {
 server.listen(port, () => console.log(`Running on http://localhost:${port}`))
 
 if (module.hot) {
-  module.hot.accept(['./view', './model']);
+  module.hot.accept(['./view', './model', './db']);
 }

@@ -1,7 +1,8 @@
 import { nanoid } from 'nanoid'
 import normalizeURL from 'normalize-url';
-
+import db from './db.js';
 const oneday = 60 * 60 * 24 * 1000;
+
 // CHANGE TO USE A DB FOR A PERSISTENT SOLUTION
 
 class ShortURL {
