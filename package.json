@@ -21,6 +21,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "nanoid": "^3.1.20",
-    "normalize-url": "^5.3.0"
+    "normalize-url": "^5.3.0",
+    "redis": "^3.0.2"
   }
 }
